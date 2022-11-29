@@ -1,0 +1,6 @@
+Nav {
+    display: flex;
+    background-color: gray;
+    justify-content: space-around;
+    padding: 40px;
+}
