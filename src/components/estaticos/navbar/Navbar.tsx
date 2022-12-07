@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography} from '@material-ui/core';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import {Box} from '@mui/material';
 import { Link } from 'react-router-dom';
 import {useNavigate } from 'react-router-dom'
@@ -13,7 +13,7 @@ function Navbar() {
     function goLogout(){
         setToken('')
         alert("Usuário deslogado")
-       navigate('/login')
+        navigate('/login')
     }
     return (
         <>
