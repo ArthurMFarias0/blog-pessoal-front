@@ -1,46 +1,88 @@
-# Getting Started with Create React App
+<h1 align="center">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" alt="Logo React" width="120"><br><br>
+    Blog Pessoal React
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div>
+    <p align="center">
+<a>
+    <img src="https://img.shields.io/static/v1?label=Library&message=React&color=aquamarine&style=for-the-badge&logo=React" alt="Language: React">
+</a>
+    <a href="#">
+        <img src="https://img.shields.io/static/v1?label=Language&message=Typescript&color=blue&style=for-the-badge&logo=Typescript" alt="Language: Typescript">
+    </a>
+    </p>
+</div>
 
-## Available Scripts
+## 📌Pré-Requisitos
 
-In the project directory, you can run:
+**Você deve ter instalado em sua máquina**
+- [Node.js](https://nodejs.org/en/)
+- [Npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
-### `npm start`
+**Recomendações**
+-   Instale a seguinte Extensão no seu VSCode: [ES7+ React/Redux/React-Native snippets - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) 
+- Após a instalação da Extensão, você pode usar dentro dos arquivos .JSX/.TSX os **Atalhos**: 
+	 - **rfce**: cria um componente de função com exportação;
+	 - **rafce** cria um componente de função com arrowfunction com exportaçao;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📕Instalação
 
-### `npm test`
+### Criando/Instalando o React
+```
+npm install -g create-react-app
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npx create-react-app blog-pessoal --template typescript 
+```
+---
+### Instalação do Material UI
+```
+yarn add @material-ui/core@4.12.3
+```
+```
+yarn add @material-ui/icons@4.11.2
+```
+```
+yarn add @mui/icons-material@5.0.5
+```
+```
+yarn add @material-ui/lab@4.0.0-alpha.60
+```
+```
+yarn add @emotion/react@11.5.0
+```
+```
+yarn add @emotion/styled@11.3.0
+```
+```
+yarn add @mui/material@5.0.6
+```
+---
+### Instalação da React Router Dom
+```
+yarn add react-router-dom@6
+```
+---
+### Instalação do Axios
+```
+yarn add axios@0.21.4
+```
+---
+### Instalação do useLocalStorage
+```
+yarn add react-use-localstorage@3.5.3
+```
+---
+### Instalação do Redux
+```
+yarn add @types/redux@3.6.0 react-redux@7.2.5
+```
+---
+### Instalação da React-toastify
+```
+yarn add react-toastify@8.0.3
+```
