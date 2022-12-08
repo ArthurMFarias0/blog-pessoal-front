@@ -1,8 +1,14 @@
 .cursor{
     cursor: pointer;
     color: white;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .text-decorator-none{
     text-decoration: none;
+}
+
+.navCor {
+    background-color: violet;
 }
