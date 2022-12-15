@@ -2,6 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Grid, Typography, TextField, Button } from '@material-ui/core';
 import {Box} from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
 import './Login.css';
@@ -11,10 +12,12 @@ import { addToken } from "../../store/tokens/actions";
 function Login() {
     let navigate = useNavigate();
     const dispatch = useDispatch();
-    const [token, setToken] = useState('');
+    const [token, setToken] = useLocalStorage('token');
+
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
+            nome: '',
             usuario: '',
             senha: '',
             token: ''
@@ -39,11 +42,11 @@ function Login() {
         async function onSubmit(e: ChangeEvent<HTMLFormElement>){
             e.preventDefault();
             try{
-                await login(`/usuarios/logar`, userLogin, setToken)
+                await login(`/auth/logar`, userLogin, setToken)
 
-                alert('Usuário logado com sucesso!');
-            }catch(error){
-                alert('Dados do usuário inconsistentes. Erro ao logar!');
+                alert('Usuário logado com sucesso!')
+            }catch{
+                alert('Dados do usuário não encontrados. Erro ao logar')
             }
         }
 
@@ -56,9 +59,9 @@ function Login() {
                         <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
                         <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password'fullWidth />
                         <Box marginTop={2} textAlign='center'>
-                                <Button type='submit' variant='contained' color='primary'>
-                                    Logar
-                                </Button>
+                            <Button type='submit' variant='contained' color='primary'>
+                                Logar
+                            </Button>
                         </Box>
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2}>
@@ -67,8 +70,7 @@ function Login() {
                         </Box>
                         <Link to='/cadastrousuario'>
                             <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
-                        </Link>
-                            
+                        </Link>      
                     </Box>
                 </Box>
             </Grid>
